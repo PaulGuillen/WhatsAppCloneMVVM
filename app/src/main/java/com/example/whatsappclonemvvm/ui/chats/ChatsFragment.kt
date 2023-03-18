@@ -1,4 +1,4 @@
-package com.example.whatsappclonemvvm.ui.calls
+package com.example.whatsappclonemvvm.ui.chats
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,16 +7,22 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.whatsappclonemvvm.R
 import com.example.whatsappclonemvvm.databinding.FragmentCallsBinding
-class Callsragment : Fragment() {
+import com.example.whatsappclonemvvm.databinding.FragmentChatsBinding
 
-    private var _binding : FragmentCallsBinding? = null
+class ChatsFragment : Fragment() {
+
+    private var _binding: FragmentChatsBinding? = null
+    private val binding: FragmentChatsBinding
+        get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_calls, container, false)
-    }
+        _binding = FragmentChatsBinding.inflate(inflater, container, false)
 
+        return binding.root
+    }
 }
+
